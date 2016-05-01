@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Calculator</title>
+
+<script src="https://code.jquery.com/jquery-2.2.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autonumeric/1.9.43/autoNumeric.js"></script>
+<script>
+jQuery(function($) {
+    $('.auto').autoNumeric('init');
+	divs();
+});
+</script>
+<script src="js/cal.js"></script>
+
+
+
+
+
+
+
+<style>
+.col1
+{padding-left:15px;
+text-align:left;	
+}
+.row1
+{ height:50px;
+border: 1px solid thick #f00;	
+}
+#tbl {
+    border: 3px solid #00f;
+}
+#tbd tr {
+    border: 1px solid #00f;
+}
+.inpt1
+{ border:#073593 thin solid;
+}
+</style>
+</head>
+
+<body>
+<div style="max-width:500px; font-family:Arial,Helvetica,sans-serif;" id="first">
+
+<table id="tbl" width="100%" frame="box" rules="rows" >
+  <tbody id="tbody">
+    <tr>
+      <td colspan="2" align="center">
+<h3 style="color:#0065ab">Single Coverage Calculator</h3></td>
+      
+    </tr>
+    <tr class="row1" style="border:solid 3px thick #000000">
+      <td class="col1"  width="65%">A member of CBAA?</td>
+      <td width="35%"><select name="select1" id="select1">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select></td>
+    </tr>
+    <tr class="row1" style="border:solid 3px thick #000000">
+      <td class="col1"  width="65%"></td>
+      <td width="35%"><input type="button" value="Next" onClick="divs1()"></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table width="100%" frame="box" rules="rows" >
+  <tbody>
+    <tr class="row1" style="border:solid 3px thick #000000"> </tr>
+  </tbody>
+</table>
+
+</div>
+
+<div style="max-width:500px; font-family:Arial,Helvetica,sans-serif;" id="second">
+
+<table id="tbl" width="100%" frame="box" rules="rows" >
+  <tbody id="tbody">
+    <tr>
+      <td colspan="2" align="center">
+<h3 style="color:#0065ab">Single Coverage Calculator</h3></td>
+      
+    </tr>
+    <tr class="row1" style="border:solid 3px thick #000000">
+      <td class="col1"  width="65%">A member of CBEA?</td>
+      <td width="35%"><select name="select2" id="select2">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select></td>
+    </tr>
+    <tr class="row1" style="border:solid 3px thick #000000">
+      <td class="col1"  width="65%"></td>
+      <td width="35%"><input type="button" value="Next" onClick="divs2()"></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table width="100%" frame="box" rules="rows" >
+  <tbody>
+    <tr class="row1" style="border:solid 3px thick #000000"> </tr>
+  </tbody>
+</table>
+
+</div>
+<div style="max-width:500px; font-family:Arial,Helvetica,sans-serif;" id="third">
+<table id="tbl" width="100%" frame="box" rules="rows" >
+  <tbody id="tbody">
+    <tr>
+      <td colspan="2" align="center">
+<h3 style="color:#0065ab">Single Coverage Calculator</h3></td>
+      
+    </tr>
+    <tr class="row1" style="border:solid 3px thick #000000" id="salary_range_row">
+      <td class="col1"  width="65%">Salary Range:</td>
+      <td width="35%"><select id="salary_range">
+        <option value="6">$20,000 - $34,999</option>
+        <option value="9">$35,000 - $49,999</option>
+        <option value="17">$50,000+</option>
+       
+        &nbsp;</select></td>
+    </tr>
+    <tr class="row1" id="annual_salary_row" style="border:solid 3px thick #000000">
+      <td class="col1"  width="65%">Annual Salary:</td>
+      <td width="35%"><input   class="auto inpt1" data-v-min="0" data-v-max="99999999" data-a-sign="$ " value="36000"    type="text" name="annual_salary" id="annual_salary"></td>
+    </tr>
+    <tr class="row1">
+      <td class="col1" >The number of paychecks per year:</td>
+      <td><select id="paychecks">
+        <option value="20">20</option>
+        <option value="22">22</option>
+        <option value="24">24</option>
+        <option value="26">26</option>
+        &nbsp;</select></td>
+    </tr>
+    <tr class="row1">
+      <td class="col1">Monthly premium:</td>
+      <td><input   class="auto inpt1" data-v-min="0" data-v-max="99999999" data-a-sign="$ " value="1000"    type="text" name="premium" id="premium"></td>
+    </tr>
+    <tr class="row1">
+      <td class="col1">
+
+Calculated Premium contribution Percentage
+</td>
+      <td><input name="premium_percent"   type="text"  class="auto" style="width:50px; border:#073593 thin solid;" id="premium_percent" value="1.5" readonly data-v-min="0.00" data-v-max="500.00" data-a-sign=" %" data-p-sign="s"></td>
+    </tr>
+    <tr class="row1">
+      <td colspan="2" align="center"><input style="  padding: 0.2em; width: 12em; color:#0065ab; background-color:#FFFFFF ;font-weight:bold; border-color:#0000ff; cursor:pointer;
+       " type="button" value="Calculate Contribution" id="calculate" onClick="cal1()"></td>
+      </tr>
+    <tr class="row1">
+      <td style=" width:70%;padding-left:15px"><strong>Your Required Health Care Contribution is:</strong></td>
+      <td><span  id="health_contribution"></span></td>
+    </tr>
+  </tbody>
+</table>
+
+
+</div>
+
+</body>
+</html>
