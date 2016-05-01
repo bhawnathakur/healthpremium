@@ -127,23 +127,44 @@ border: 1px solid thick #f00;
       <td width="35%"><input   class="auto inpt1" data-v-min="0" data-v-max="99999999" data-a-sign="$ " value="36000"    type="text" name="annual_salary" id="annual_salary"></td>
     </tr>
     <tr class="row1">
-      <td class="col1" >The number of paychecks per year:</td>
-      <td><select id="paychecks">
-        <option value="20">20</option>
-        <option value="22">22</option>
-        <option value="24">24</option>
-        <option value="26">26</option>
+      <td class="col1" ><strong>Select Plan</strong></td>
+      <td></td>
+    </tr>
+    
+     <tr class="row1">
+      <td class="col1" >Medical</td>
+      <td><select id="medicalplan">
+        <option value="696">Aetna Open Access $10 Buy Up Plan</option>
+        <option value="498">Aetna Open Access $25 Core Plan</option>
+        <option value="641">Aetna QPOS $10</option>
+        <option value="696">AmeriHealth $10 Buy Up Plan</option>
+        <option value="498">AmeriHealth $25 Core Plan</option>
+        <option value="641">AmeriHealth $10 QPOS Plan:</option>
+        <option value="0">Medical Waived</option>
+        &nbsp;</select></td>
+    </tr>
+     <tr class="row1">
+      <td class="col1" >Dental</td>
+      <td><select id="dentalplan">
+        <option value="33.41">Aetna Dental</option>
+        <option value="0">Dental Waived</option>
+      
         &nbsp;</select></td>
     </tr>
     <tr class="row1">
-      <td class="col1">Monthly premium:</td>
-      <td><input   class="auto inpt1" data-v-min="0" data-v-max="99999999" data-a-sign="$ " value="1000"    type="text" name="premium" id="premium"></td>
+      <td class="col1" >Prescription</td>
+      <td><select id="prescriptionplan">
+        <option value="190.01">Benecard Buyup</option>
+        <option value="175.77">Benecard Core</option>
+        <option value="0">Prescription Waived</option>
+       
+        &nbsp;</select></td>
     </tr>
     <tr class="row1">
       <td class="col1">
-
-Calculated Premium contribution Percentage
-</td>
+        
+        Calculated Premium contribution Percentage
+  </td>
       <td><input name="premium_percent"   type="text"  class="auto" style="width:50px; border:#073593 thin solid;" id="premium_percent" value="1.5" readonly data-v-min="0.00" data-v-max="500.00" data-a-sign=" %" data-p-sign="s"></td>
     </tr>
     <tr class="row1">
